@@ -1,0 +1,93 @@
+/* General styling for the chat app container */
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Header style for the chat app */
+  .App-header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Chat messages container */
+  .chats {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #f0f2f5;
+  }
+  
+  /* Chat message styles */
+  .align-self-start {
+    max-width: 60%;
+    align-self: flex-start;
+    background-color: #d1ecf1;
+    border-radius: 8px;
+    padding: 10px;
+    color: #0c5460;
+  }
+  
+  .align-self-end {
+    max-width: 60%;
+    align-self: flex-end;
+    background-color: #c3e6cb;
+    border-radius: 8px;
+    padding: 10px;
+    color: #155724;
+  }
+  
+  /* Input area */
+  .input-group {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 8px 15px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button:disabled {
+    background-color: #ddd;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #3b7bbf;
+  }
+  
