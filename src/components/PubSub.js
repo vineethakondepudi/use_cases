@@ -5,7 +5,7 @@ import { WebPubSubClient } from "@azure/web-pubsub-client";
 function UserChat({ from, message }) {
   return (
     <div className="align-self-start">
-      {/* <small>from {from}</small> */}
+      <small>from {from}</small>
       <p>{message}</p>
     </div>
   );
