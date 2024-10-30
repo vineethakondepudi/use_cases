@@ -1,4 +1,4 @@
-/* General styling for the chat app container */
+
 html, body, #root {
     height: 100%;
     margin: 0;
@@ -15,7 +15,7 @@ html, body, #root {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
-  /* Header style for the chat app */
+  
   .App-header {
     background-color: #4a90e2;
     color: white;
@@ -26,7 +26,7 @@ html, body, #root {
     justify-content: center;
   }
   
-  /* Chat messages container */
+
   .chats {
     flex: 1;
     padding: 15px;
@@ -37,7 +37,7 @@ html, body, #root {
     background-color: #f0f2f5;
   }
   
-  /* Chat message styles */
+
   .align-self-start {
     max-width: 60%;
     align-self: flex-start;
@@ -56,7 +56,7 @@ html, body, #root {
     color: #155724;
   }
   
-  /* Input area */
+
   .input-group {
     display: flex;
     padding: 10px;

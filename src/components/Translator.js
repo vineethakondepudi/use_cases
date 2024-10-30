@@ -17,17 +17,16 @@ function Translator() {
     Telugu: 'te'
   };
 
-  // States for managing input, languages, and translation
   const [message, setMessage] = useState('');
   const [translatedMessage, setTranslatedMessage] = useState('');
   const [fromLanguage, setFromLanguage] = useState('en');
   const [toLanguage, setToLanguage] = useState('es');
 
-  // Function to translate message
+
   const translateMessage = async () => {
-    const subscriptionKey = '363b106a459e4ad5b028a1b86e924dc7'; // Replace with your Azure subscription key
+    const subscriptionKey = '363b106a459e4ad5b028a1b86e924dc7'; 
     const endpoint = `https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&from=${fromLanguage}&to=${toLanguage}`;
-    const location = 'northcentralus'; // e.g., "westus2"
+    const location = 'northcentralus'; 
 
     try {
         const response = await fetch(endpoint, {
@@ -42,7 +41,7 @@ function Translator() {
     
         if (!response.ok) {
           const errorDetails = await response.json();
-          console.error('Error details:', errorDetails); // Log error details
+          console.error('Error details:', errorDetails); 
           throw new Error(`Translation failed: ${response.status} ${response.statusText}`);
         }
     
@@ -57,7 +56,7 @@ function Translator() {
     <div style={{ padding: '20px', maxWidth: '400px', margin: 'auto' }}>
       <h2>Translator</h2>
 
-      {/* Message Input */}
+ 
       <div style={{ marginBottom: '10px' }}>
         <label>Message:</label>
         <textarea
@@ -68,7 +67,7 @@ function Translator() {
         />
       </div>
 
-      {/* From Language Selector */}
+     
       <div style={{ marginBottom: '10px' }}>
         <label>From Language:</label>
         <select
@@ -84,7 +83,7 @@ function Translator() {
         </select>
       </div>
 
-      {/* To Language Selector */}
+  
       <div style={{ marginBottom: '10px' }}>
         <label>To Language:</label>
         <select
@@ -100,12 +99,12 @@ function Translator() {
         </select>
       </div>
 
-      {/* Translate Button */}
+      
       <button onClick={translateMessage} style={{ width: '100%', padding: '10px', marginBottom: '10px' }}>
         Translate
       </button>
 
-      {/* Translated Message Display */}
+
       {translatedMessage && (
         <div>
           <h3>Translated Message:</h3>
